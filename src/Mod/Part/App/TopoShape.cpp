@@ -127,7 +127,7 @@
 #include <ShapeExtend_Explorer.hxx>
 #include <ShapeFix_Shape.hxx>
 #include <ShapeUpgrade_RemoveInternalWires.hxx>
-#include <ShapeUpgrade_ShellSewing.hxx>
+//#include <ShapeUpgrade_ShellSewing.hxx>
 #include <Standard_Failure.hxx>
 #include <Standard_Version.hxx>
 #include <STEPControl_Reader.hxx>
@@ -4131,8 +4131,9 @@ TopoDS_Shape TopoShape::makeShell(const TopoDS_Shape& input) const
         shape = shell;
         BRepCheck_Analyzer check(shell);
         if (!check.IsValid()) {
-            ShapeUpgrade_ShellSewing sewShell;
-            shape = sewShell.ApplySewing(shell);
+            //ShapeUpgrade_ShellSewing sewShell;
+            //shape = sewShell.ApplySewing(shell);
+            FC_WARN("FIXME: ShapeUpgrade_ShellSewing ApplySewing()");
         }
 
         if (shape.IsNull()) {

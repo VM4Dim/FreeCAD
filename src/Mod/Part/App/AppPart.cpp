@@ -176,9 +176,9 @@
 #include <HLRBRep/HLRToShapePy.h>
 #include <HLRBRep/PolyHLRToShapePy.h>
 
-#include <ShapeFix/ShapeFix_EdgeConnectPy.h>
+//#include <ShapeFix/ShapeFix_EdgeConnectPy.h>
 #include <ShapeFix/ShapeFix_EdgePy.h>
-#include <ShapeFix/ShapeFix_FaceConnectPy.h>
+//#include <ShapeFix/ShapeFix_FaceConnectPy.h>
 #include <ShapeFix/ShapeFix_FacePy.h>
 #include <ShapeFix/ShapeFix_FreeBoundsPy.h>
 #include <ShapeFix/ShapeFix_FixSmallFacePy.h>
@@ -402,8 +402,8 @@ PyMOD_INIT_FUNC(Part)
     Base::Interpreter().addType(&Part::ShapeFix_WirePy::Type, shapeFix, "Wire");
     Base::Interpreter().addType(&Part::ShapeFix_WireframePy::Type, shapeFix, "Wireframe");
     Base::Interpreter().addType(&Part::ShapeFix_WireVertexPy::Type, shapeFix, "WireVertex");
-    Base::Interpreter().addType(&Part::ShapeFix_EdgeConnectPy::Type, shapeFix, "EdgeConnect");
-    Base::Interpreter().addType(&Part::ShapeFix_FaceConnectPy::Type, shapeFix, "FaceConnect");
+//    Base::Interpreter().addType(&Part::ShapeFix_EdgeConnectPy::Type, shapeFix, "EdgeConnect");
+//    Base::Interpreter().addType(&Part::ShapeFix_FaceConnectPy::Type, shapeFix, "FaceConnect");
     Base::Interpreter().addType(&Part::ShapeFix_FixSmallFacePy::Type, shapeFix, "FixSmallFace");
     Base::Interpreter().addType(&Part::ShapeFix_FixSmallSolidPy::Type, shapeFix, "FixSmallSolid");
     Base::Interpreter().addType(&Part::ShapeFix_FreeBoundsPy::Type, shapeFix, "FreeBounds");

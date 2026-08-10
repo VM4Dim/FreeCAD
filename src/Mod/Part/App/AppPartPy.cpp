@@ -31,7 +31,7 @@
 #include <BRepBuilderAPI_MakeSolid.hxx>
 #include <BRepCheck_Analyzer.hxx>
 #include <BRepFeat_SplitShape.hxx>
-#include <BRepOffsetAPI_Sewing.hxx>
+//#include <BRepOffsetAPI_Sewing.hxx>
 #include <BRepPrim_Wedge.hxx>
 #include <BRepPrimAPI_MakeBox.hxx>
 #include <BRepPrimAPI_MakeCone.hxx>
@@ -58,7 +58,7 @@
 #include <Precision.hxx>
 #include <ShapeFix.hxx>
 #include <ShapeBuild_ReShape.hxx>
-#include <ShapeUpgrade_ShellSewing.hxx>
+//#include <ShapeUpgrade_ShellSewing.hxx>
 #include <Standard_DomainError.hxx>
 #include <Standard_Version.hxx>
 #include <TopExp_Explorer.hxx>

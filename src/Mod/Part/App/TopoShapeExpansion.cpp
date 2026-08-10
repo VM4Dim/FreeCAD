@@ -78,7 +78,7 @@
 #include <ShapeAnalysis_FreeBounds.hxx>
 #include <ShapeBuild_ReShape.hxx>
 #include <ShapeConstruct_Curve.hxx>
-#include <ShapeUpgrade_ShellSewing.hxx>
+//#include <ShapeUpgrade_ShellSewing.hxx>
 #include <TopTools_HSequenceOfShape.hxx>
 #include <ShapeFix_Shape.hxx>
 #include <ShapeFix_ShapeTolerance.hxx>
@@ -5910,8 +5910,9 @@ TopoShape& TopoShape::makeElementShell(bool silent, const char* op, ElementMapPo
         shape = shell;
         BRepCheck_Analyzer check(shell);
         if (!check.IsValid()) {
-            ShapeUpgrade_ShellSewing sewShell;
-            shape = sewShell.ApplySewing(shell);
+            // ShapeUpgrade_ShellSewing sewShell;
+            // shape = sewShell.ApplySewing(shell);
+            FC_WARN("FIXME: ShapeUpgrade_ShellSewing ApplySewing()");
             // TODO confirm the above won't change OCCT topological naming
         }
 
@@ -6143,12 +6144,13 @@ TopoShape& TopoShape::makeElementBoolean(
         }
         BRepCheck_Analyzer check(shell);
         if (!check.IsValid()) {
-            ShapeUpgrade_ShellSewing sewShell;
-            setShape(sewShell.ApplySewing(shell), false);
+            // ShapeUpgrade_ShellSewing sewShell;
+            // setShape(sewShell.ApplySewing(shell), false);
+            FC_WARN("FIXME: ShapeUpgrade_ShellSewing ApplySewing()");
             // TODO: confirm the above won't change OCCT topological naming
-            if (elementMapPolicy == ElementMapPolicy::Drop) {
-                dropElementNaming();
-            }
+            // if (elementMapPolicy == ElementMapPolicy::Drop) {
+            //    dropElementNaming();
+            // }
         }
         return *this;
     }

@@ -31,7 +31,7 @@
 #include <TopoDS.hxx>
 #include <TopoDS_Shell.hxx>
 #include <ShapeAnalysis_Shell.hxx>
-#include <ShapeUpgrade_ShellSewing.hxx>
+//#include <ShapeUpgrade_ShellSewing.hxx>
 
 
 #include <Base/GeometryPyCXX.h>
@@ -115,8 +115,10 @@ PyObject* TopoShapeShellPy::add(PyObject* args)
             BRepCheck_Analyzer check(shell);
             getTopoShapePtr()->mapSubElement(shape);
             if (!check.IsValid()) {
-                ShapeUpgrade_ShellSewing sewShell;
-                getTopoShapePtr()->setShape(sewShell.ApplySewing(shell));
+                // ShapeUpgrade_ShellSewing sewShell;
+                // getTopoShapePtr()->setShape(sewShell.ApplySewing(shell));
+                // FC_WARN("FIXME: ShapeUpgrade_ShellSewing ApplySewing()");
+                Base::Console().warning("FIXME: ShapeUpgrade_ShellSewing ApplySewing()");
             }
         }
         else {

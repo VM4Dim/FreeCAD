@@ -155,8 +155,8 @@ generate_from_py(ShapeFix/ShapeFix_Solid)
 generate_from_py(ShapeFix/ShapeFix_Wire)
 generate_from_py(ShapeFix/ShapeFix_Wireframe)
 generate_from_py(ShapeFix/ShapeFix_WireVertex)
-generate_from_py(ShapeFix/ShapeFix_EdgeConnect)
-generate_from_py(ShapeFix/ShapeFix_FaceConnect)
+#generate_from_py(ShapeFix/ShapeFix_EdgeConnect)
+#generate_from_py(ShapeFix/ShapeFix_FaceConnect)
 generate_from_py(ShapeFix/ShapeFix_FixSmallFace)
 generate_from_py(ShapeFix/ShapeFix_FixSmallSolid)
 generate_from_py(ShapeFix/ShapeFix_FreeBounds)
@@ -498,10 +498,10 @@ SET(ShapeFixPy_SRCS
     ShapeFix/ShapeFix_WireframePyImp.cpp
     ShapeFix/ShapeFix_WireVertex.pyi
     ShapeFix/ShapeFix_WireVertexPyImp.cpp
-    ShapeFix/ShapeFix_EdgeConnect.pyi
-    ShapeFix/ShapeFix_EdgeConnectPyImp.cpp
-    ShapeFix/ShapeFix_FaceConnect.pyi
-    ShapeFix/ShapeFix_FaceConnectPyImp.cpp
+#    ShapeFix/ShapeFix_EdgeConnect.pyi
+#    ShapeFix/ShapeFix_EdgeConnectPyImp.cpp
+#    ShapeFix/ShapeFix_FaceConnect.pyi
+#    ShapeFix/ShapeFix_FaceConnectPyImp.cpp
     ShapeFix/ShapeFix_FixSmallFace.pyi
     ShapeFix/ShapeFix_FixSmallFacePyImp.cpp
     ShapeFix/ShapeFix_FixSmallSolid.pyi
